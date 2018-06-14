@@ -8,8 +8,21 @@
   width: 180rpx;
   height: 120rpx;
 }
+.newslist{
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+}
+.txt{
+  font-size: 30rpx;
+  width: 500rpx;
+  margin-left: 10rpx;
+}
 .blance{
   width: 100%;
   flex-direction: column;
   align-items: center;
 }
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:block;}
+.fr{float:right}
+.fl{float:left}
