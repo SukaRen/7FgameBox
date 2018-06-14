@@ -2,7 +2,6 @@
   "pages": [
     "pages/index/index",
     "pages/news/news",
-    "pages/baike/baike",
     "pages/news/newdetail/newdetail",
     "pages/logs/logs"
   ],
@@ -33,14 +32,6 @@
         "selectedColor": "#000000",
         "iconPath": "images/tab2_normal@3x.png",
         "selectedIconPath": "images/tab2_action@3x.png"
-      },
-      {
-        "pagePath": "pages/baike/baike",
-        "text": "百科",
-        "color": "#DCEDC8",
-        "selectedColor": "#000000",
-        "iconPath": "images/tab3_normal@3x.png",
-        "selectedIconPath": "images/tab3_action@3x.png"
       }
     ]
   }
