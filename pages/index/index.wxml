@@ -13,8 +13,10 @@
  
   <view>
     <view class='newslist clearfix' wx:for="{{allnews}}" wx:for-index="index" wx:for-item="item">
-      <image class='news-img fl' src='{{item.news_titlePic}}'></image>
-      <text class='txt fl'>{{item.Small_Title}}</text>
+      <view class='newslist' catchtap="onNewsTap" data-newid="{{item.News_Id}}" data-newurl="{{item.News_URL}}">
+        <image class='news-img fl' src='{{item.news_titlePic}}'></image>
+        <text class='txt fl'>{{item.Small_Title}}</text>
+      </view>
     </view>
   </view>
 </view>

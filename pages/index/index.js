@@ -72,8 +72,10 @@ Page({
       }
     }) 
   },
-  getText:function(){
-    console.log('mmp')
-    this.setData({ dai: '卧槽卧槽'})
+  onNewsTap: function (event) {
+    var newid = event.currentTarget.dataset.newid;
+    wx.navigateTo({
+      url: "../news/newdetail/newdetail?id=" + newid
+    })
   }
 })
