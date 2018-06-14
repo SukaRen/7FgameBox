@@ -1,21 +1,20 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <view class='blance'>
+    <image class='index-img' src='https://lg-n5z5p5go-1256921382.cos.ap-shanghai.myqcloud.com/func_1.png'></image>
+    <image class='index-img' src='https://lg-n5z5p5go-1256921382.cos.ap-shanghai.myqcloud.com/func_2.png'></image>
+    <image class='index-img' src='https://lg-n5z5p5go-1256921382.cos.ap-shanghai.myqcloud.com/func_3.png'></image>
+    <image class='index-img' src='https://lg-n5z5p5go-1256921382.cos.ap-shanghai.myqcloud.com/func_4.png'></image>
+    <image class='index-img' src='https://lg-n5z5p5go-1256921382.cos.ap-shanghai.myqcloud.com/func_5.png'></image>
+    <image class='index-img' src='https://lg-n5z5p5go-1256921382.cos.ap-shanghai.myqcloud.com/func_6.png'></image>
+    <image class='index-img' src='https://lg-n5z5p5go-1256921382.cos.ap-shanghai.myqcloud.com/func_7.png'></image>
+    <image class='index-img' src='https://lg-n5z5p5go-1256921382.cos.ap-shanghai.myqcloud.com/func_8.png'></image>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+ 
   <view>
-    <button class='btn-block' bindtap='getText'>呆</button>
-    <text>{{dai}}</text>
-  </view>
-  <view>
-    
-    <text>{{allnews}}</text>
+    <view  wx:for="{{allnews}}" wx:for-index="index" wx:for-item="item">
+      <image class='news-img' src='{{item.news_titlePic}}'></image>
+      <text>{{item.Small_Title}}</text>
+    </view>
   </view>
 </view>

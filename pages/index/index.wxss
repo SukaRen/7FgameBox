@@ -1,27 +1,15 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
+.index-img{
+  width:160rpx;
+  height:160rpx;
+  margin: 10rpx;
+}
+.news-img{
+  width: 180rpx;
+  height: 120rpx;
+}
+.blance{
+  width: 100%;
   flex-direction: column;
   align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.btn-block{
-  width: 80rpx;
-  height: 80rpx;
-  margin: 3rpx;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-  
-.usermotto {
-  margin-top: 10px;
 }

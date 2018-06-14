@@ -44,11 +44,11 @@ Page({
       })
     }
     wx.request({
-      url: 'https://cmsapi.7fgame.com/NewsService/Service/News.ashx?op=NewsListTopN&itemIds=5&CategoryIds=3&TopN=8',
+      url: 'https://cmsapi.7fgame.com/NewsService/Service/News.ashx?op=NewsListTopN&itemIds=5&CategoryIds=3&TopN=6',
       success: res => {
         console.log(res.data)
         this.setData({
-          allnews: res.data[0].Small_Title
+          allnews: res.data
         })
       }
     }) 
@@ -63,7 +63,7 @@ Page({
   },
   getNews:function(){
     wx.request({
-      url: 'https://cmsapi.7fgame.com/NewsService/Service/News.ashx?op=NewsListTopN&itemIds=5&CategoryIds=3&TopN=8', 
+      url: 'https://cmsapi.7fgame.com/NewsService/Service/News.ashx?op=NewsListTopN&itemIds=5&CategoryIds=3&TopN=6', 
       success: res => {
         console.log(res.data)
         this.setData({ 
