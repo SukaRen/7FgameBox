@@ -14,7 +14,6 @@
   border-bottom:1px solid #2a579a;
   overflow: hidden;
 }
-
 .news-text {
   display: flex;
   flex-direction: column;

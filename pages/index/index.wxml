@@ -10,7 +10,6 @@
     <image class='index-img' src='https://lg-n5z5p5go-1256921382.cos.ap-shanghai.myqcloud.com/func_7.png'></image>
     <image class='index-img' src='https://lg-n5z5p5go-1256921382.cos.ap-shanghai.myqcloud.com/func_8.png'></image>
   </view>
- 
   <view>
     <view class='newslist clearfix' wx:for="{{allnews}}" wx:for-index="index" wx:for-item="item" wx:key="News_Id">
       <view class='newslist' catchtap="onNewsTap" data-newid="{{item.News_Id}}" data-newurl="{{item.News_URL}}"> 
