@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
+    "pages/news/news",
     "pages/baike/index/index",
     "pages/baike/hero/index/index",
     "pages/baike/hero/detail/detail",
@@ -15,34 +15,34 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#888888",
-    "selectedColor": "#3080c0",
-    "borderStyle": "white",
-    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "backgroundColor": "#2a579a",
+    "color": "#DCEDC8",
+    "selectedColor": "#DCEDC8",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
+        "color": "#DCEDC8",
+        "selectedColor": "#000000",
         "iconPath": "images/tab1_normal@3x.png",
         "selectedIconPath": "images/tab1_action@3x.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/news/news",
         "text": "资讯",
+        "color": "#DCEDC8",
+        "selectedColor": "#000000",
         "iconPath": "images/tab2_normal@3x.png",
         "selectedIconPath": "images/tab2_action@3x.png"
       },
       {
         "pagePath": "pages/baike/index/index",
         "text": "百科",
+        "color": "#DCEDC8",
+        "selectedColor": "#000000",
         "iconPath": "images/tab3_normal@3x.png",
         "selectedIconPath": "images/tab3_action@3x.png"
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "我的",
-        "iconPath": "images/tab5_normal@3x.png",
-        "selectedIconPath": "images/tab5_action@3x.png"
       }
     ]
   }
