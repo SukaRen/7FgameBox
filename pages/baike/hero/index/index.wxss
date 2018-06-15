@@ -1,0 +1,16 @@
+.section_type{
+  display: flex;
+}
+.section_type .label-2{
+  flex: 1;
+}
+.section_hero{
+  display: flex;
+  padding: 5rpx;
+}
+.section_hero .hero{
+  flex: 1;
+}
+.section_hero .herotypeimg{
+  width: 100%;
+}

@@ -1,0 +1,6 @@
+<view>
+<view>描述：{{info.hinfo.hInfo}}</view><image src='{{info.hinfo.hImage}}' mode='aspectFit'></image>
+<view>推荐装备：{{info.hinfo.itemRecommend}}</view>
+<view>推荐：{{info.hinfo.hSyn}}</view>
+<view>推荐：{{info.hinfo.hHistory}}</view>
+</view>

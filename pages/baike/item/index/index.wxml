@@ -1,0 +1,26 @@
+<!--view class="search">
+  <input type='text' class="search_input" placeholder="搜你想要的" />
+  <input type='button' class="search_input" placeholder="搜索" />
+</view-->
+<view class="section">
+  <picker bindchange="binditemTypePickerChange" value="{{itemType}}" range="{{arrayType}}">
+    <view class="picker">
+      {{arrayType[itemType]}}
+    </view>
+  </picker>
+</view>
+<view class="section">
+   <picker bindchange="bindShopTypePickerChange" value="{{shopType}}" range="{{arrayShop}}">
+    <view class="picker">
+      {{arrayShop[shopType]}}
+    </view>
+  </picker>
+</view>
+<view class="container">
+  <view class="blance" wx:for="{{datalist}}" wx:for-index="index" wx:for-item="item">
+    <navigator url="/pages/baike/item/detail/detail?id={{item.itemId}}" hover-class="navigator-hover">
+      <image class='itemimg' class='index-img' src='{{item.iPic}}'></image>
+      <text class='itemname'>{{item.iName}}</text>
+    </navigator>
+  </view>
+</view>

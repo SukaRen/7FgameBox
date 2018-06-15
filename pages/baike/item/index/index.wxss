@@ -1,0 +1,14 @@
+.index-img{
+  width:160rpx;
+  height:160rpx;
+  margin: 10rpx;
+}
+.blance{
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:block;}
+.fr{float:right}
+.fl{float:left}
