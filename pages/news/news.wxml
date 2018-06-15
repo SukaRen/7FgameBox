@@ -1,2 +1,54 @@
+<<<<<<< HEAD
 <!--pages/news/news.wxml-->
 <text>pages/news/news.wxml</text>
+=======
+<!-- <view class='customSwiper'>
+  <swiper class='banner' autoplay='true' interval='5000' duration='300' indicator-dots='true'>
+    <block wx:for="{{sliderList}}" wx:key="key">
+      <swiper-item>
+        <image style='width:100%;height:100%;' src="{{item.imageSource}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view> -->
+<view class='imagetext'>
+  <view class="{{selsectState[0]?'newsSelected':''}}" bindtap='clickXinwen'>
+    <image class="icon-image" src="../../images/report.png"/>
+    <view class='tabText'>新闻</view>
+  </view>
+  <view class="{{selsectState[1]?'newsSelected':''}}" bindtap='clickGonggao'>
+    <image class="icon-image" src="../../images/kuaidi.png"/>
+    <view class='tabText'>公告</view>
+  </view>
+  <view class="{{selsectState[2]?'newsSelected':''}}" bindtap='clickSaishi'>
+    <image class="icon-image" src="../../images/tiyu.png"/>
+    <view class='tabText'>赛事</view>
+  </view>
+  <view class="{{selsectState[3]?'newsSelected':''}}" bindtap='clickHuodong'>
+    <image class="icon-image" src="../../images/purse.png"/>
+    <view class='tabText'>活动</view>
+  </view>
+  <view class="{{selsectState[4]?'newsSelected':''}}" bindtap='clickGonglue'>
+    <image class="icon-image" src="../../images/service.png"/>
+    <view class='tabText'>攻略</view>
+  </view>
+</view>
+<!-- 新闻列表 -->
+<view class="container news-list">
+  <block wx:for="{{newslist}}" wx:key="key">
+    <view class="news-item" data-title="{{item.Small_Title}}" catchtap="onNewsTap" data-newid="{{item.News_Id}}" data-newurl="{{item.News_URL}}">
+		<view>
+		  <image class="list-image" src="{{item.news_titlePic}}" mode="aspectFill"/>
+		</view>
+      <view class="news-text">
+        <text class="news-title">{{item.Small_Title}}</text>
+        <!-- <view class="news-stamp">
+          <text>{{item.View_Degree}}</text>
+          <text>{{item.AddDate}}</text>
+        </view> -->
+      </view>
+    </view>
+  </block>
+</view>
+
+>>>>>>> bd333a9b154397acea5f1923d15549fb011de4b9

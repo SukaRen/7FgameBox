@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/news/news",
+<<<<<<< HEAD
     "pages/baike/index/index",
     "pages/baike/hero/index/index",
     "pages/baike/hero/detail/detail",
@@ -13,6 +14,16 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "群雄BOX",
     "navigationBarTextStyle": "black"
+=======
+    "pages/news/newdetail/newdetail",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2a579a",
+    "navigationBarTitleText": "群雄盒子",
+    "navigationBarTextStyle": "white"
+>>>>>>> bd333a9b154397acea5f1923d15549fb011de4b9
   },
   "tabBar": {
     "position": "bottom",
@@ -23,10 +34,14 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
+<<<<<<< HEAD
         "color": "#DCEDC8",
+=======
+        "color":"#DCEDC8",
+>>>>>>> bd333a9b154397acea5f1923d15549fb011de4b9
         "selectedColor": "#000000",
         "iconPath": "images/tab1_normal@3x.png",
-        "selectedIconPath": "images/tab1_action@3x.png"
+        "selectedIconPath":"images/tab1_action@3x.png"
       },
       {
         "pagePath": "pages/news/news",
@@ -35,6 +50,7 @@
         "selectedColor": "#000000",
         "iconPath": "images/tab2_normal@3x.png",
         "selectedIconPath": "images/tab2_action@3x.png"
+<<<<<<< HEAD
       },
       {
         "pagePath": "pages/baike/index/index",
@@ -43,6 +59,8 @@
         "selectedColor": "#000000",
         "iconPath": "images/tab3_normal@3x.png",
         "selectedIconPath": "images/tab3_action@3x.png"
+=======
+>>>>>>> bd333a9b154397acea5f1923d15549fb011de4b9
       }
     ]
   }
