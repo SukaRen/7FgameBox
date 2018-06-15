@@ -1,0 +1,7 @@
+<view>
+<view>道具名称：{{info.iteminfo.iName}}</view>
+<image src='{{info.iteminfo.iPic}}' mode='aspectFit'></image>
+<view>描述：{{info.iteminfo.intro}}</view>
+<view>道具类型：{{info.iteminfo.iTypeStr}}</view>
+<view>商城类型：{{info.iteminfo.iShopStr}}</view>
+</view>

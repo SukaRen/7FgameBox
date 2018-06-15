@@ -1,0 +1,6 @@
+<view class="page">
+  <navigator url="/pages/baike/hero/index/index" hover-class="navigator-hover"><image src='http://Static.7fgame.com/Wx7FgaemBox/baiketop12@3x.png' mode='aspectFit'></image>
+  </navigator>
+  <navigator url="/pages/baike/item/index/index" hover-class="navigator-hover"><image src='http://Static.7fgame.com/Wx7FgaemBox/baiketop13@3x.png' mode='aspectFit'></image>
+  </navigator>
+</view>

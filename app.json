@@ -3,12 +3,16 @@
     "pages/index/index",
     "pages/news/news",
     "pages/news/newdetail/newdetail",
-    "pages/logs/logs"
+    "pages/baike/index/index",
+    "pages/baike/hero/index/index",
+    "pages/baike/hero/detail/detail",
+    "pages/baike/item/index/index",
+    "pages/baike/item/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#2a579a",
-    "navigationBarTitleText": "群雄盒子",
+    "navigationBarTitleText": "群雄BOX",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -20,7 +24,7 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "color":"#DCEDC8",
+        "color": "#DCEDC8",
         "selectedColor": "#000000",
         "iconPath": "images/tab1_normal@3x.png",
         "selectedIconPath":"images/tab1_action@3x.png"
@@ -32,6 +36,14 @@
         "selectedColor": "#000000",
         "iconPath": "images/tab2_normal@3x.png",
         "selectedIconPath": "images/tab2_action@3x.png"
+      },
+      {
+        "pagePath": "pages/baike/index/index",
+        "text": "百科",
+        "color": "#DCEDC8",
+        "selectedColor": "#000000",
+        "iconPath": "images/tab3_normal@3x.png",
+        "selectedIconPath": "images/tab3_action@3x.png"
       }
     ]
   }
