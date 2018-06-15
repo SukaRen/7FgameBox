@@ -11,7 +11,7 @@
   <view class="{{selsectState[0]?'newsSelected':''}} newsTab" bindtap='clickXinwen'>
     <image class="icon-image" src="../../images/report.png"/>
     <view class='tabText'>新闻</view>
-  </view>
+  </view> 
   <view class="{{selsectState[1]?'newsSelected':''}} newsTab" bindtap='clickGonggao'>
     <image class="icon-image" src="../../images/kuaidi.png"/>
     <view class='tabText'>公告</view>

@@ -27,4 +27,4 @@
 .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
 .clearfix{display:block;}
 .fr{float:right}
-.fl{float:left}
+.fl{float:left} 
