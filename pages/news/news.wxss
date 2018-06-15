@@ -6,17 +6,21 @@
 }
 
 .news-item {
+  padding:20rpx 0 10rpx;
   display: flex;
   flex-direction: row;
-  height:150rpx;
+  height:120rpx;
   /*width属性解决标题文字太短而导航缩略偏移*/
   width:100%;
   border-bottom:1px solid #2a579a;
+  overflow: hidden;
 }
 
 .news-text {
   display: flex;
   flex-direction: column;
+  width:500rpx;
+  margin-left:10rpx;
 }
 
 .news-stamp {
@@ -58,22 +62,31 @@
   margin: 20rpx 20rpx 0;
 }
 .imagetext{
-  margin: 0 0 10rpx 10rpx;
+  margin: 10rpx;
   color:  #666;
   font-size:15px;
   display: flex;
   flex-direction: row;
   justify-content:space-around;
 }
-.newsSelected{
-  border: 1px #2a579a solid;
+.newsTab{
+  border: 1px #ffffff solid;
   border-radius: 20%;
+  text-align: center;
+}
+.newsSelected{
+  border-radius: 20%;
+  border: 1px #2a579a solid;
 }
 .tabText{
-  margin:0 0 0 40rpx;
+  text-align: center;
 }
 .customSwiper {
   height: 420rpx;
   position: relative;
   }
 .customSwiper swiper{height: 100%;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:block;}
+.fr{float:right}
+.fl{float:left}

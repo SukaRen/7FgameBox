@@ -11,6 +11,8 @@
 .newslist{
   margin-top: 20rpx;
   margin-bottom: 10rpx;
+  height:120rpx;
+  overflow: hidden;
 }
 .txt{
   font-size: 30rpx;

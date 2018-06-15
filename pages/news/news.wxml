@@ -8,23 +8,23 @@
   </swiper>
 </view> -->
 <view class='imagetext'>
-  <view class="{{selsectState[0]?'newsSelected':''}}" bindtap='clickXinwen'>
+  <view class="{{selsectState[0]?'newsSelected':''}} newsTab" bindtap='clickXinwen'>
     <image class="icon-image" src="../../images/report.png"/>
     <view class='tabText'>新闻</view>
   </view>
-  <view class="{{selsectState[1]?'newsSelected':''}}" bindtap='clickGonggao'>
+  <view class="{{selsectState[1]?'newsSelected':''}} newsTab" bindtap='clickGonggao'>
     <image class="icon-image" src="../../images/kuaidi.png"/>
     <view class='tabText'>公告</view>
   </view>
-  <view class="{{selsectState[2]?'newsSelected':''}}" bindtap='clickSaishi'>
+  <view class="{{selsectState[2]?'newsSelected':''}} newsTab" bindtap='clickSaishi'>
     <image class="icon-image" src="../../images/tiyu.png"/>
     <view class='tabText'>赛事</view>
   </view>
-  <view class="{{selsectState[3]?'newsSelected':''}}" bindtap='clickHuodong'>
+  <view class="{{selsectState[3]?'newsSelected':''}} newsTab" bindtap='clickHuodong'>
     <image class="icon-image" src="../../images/purse.png"/>
     <view class='tabText'>活动</view>
   </view>
-  <view class="{{selsectState[4]?'newsSelected':''}}" bindtap='clickGonglue'>
+  <view class="{{selsectState[4]?'newsSelected':''}} newsTab" bindtap='clickGonglue'>
     <image class="icon-image" src="../../images/service.png"/>
     <view class='tabText'>攻略</view>
   </view>
@@ -32,11 +32,11 @@
 <!-- 新闻列表 -->
 <view class="container news-list">
   <block wx:for="{{newslist}}" wx:key="key">
-    <view class="news-item" data-title="{{item.Small_Title}}" catchtap="onNewsTap" data-newid="{{item.News_Id}}" data-newurl="{{item.News_URL}}">
-		<view>
+    <view class="news-item clearfix" data-title="{{item.Small_Title}}" catchtap="onNewsTap" data-newid="{{item.News_Id}}" data-newurl="{{item.News_URL}}">
+		<view class="fl">
 		  <image class="list-image" src="{{item.news_titlePic}}" mode="aspectFill"/>
 		</view>
-      <view class="news-text">
+      <view class="news-text fl">
         <text class="news-title">{{item.Small_Title}}</text>
         <!-- <view class="news-stamp">
           <text>{{item.View_Degree}}</text>
