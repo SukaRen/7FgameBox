@@ -54,7 +54,7 @@ Page({
     }) 
   },
   getUserInfo: function(e) {
-    console.log(e)
+    //console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
@@ -65,7 +65,7 @@ Page({
     wx.request({
       url: 'https://cmsapi.7fgame.com/NewsService/Service/News.ashx?op=NewsListTopN&itemIds=5&CategoryIds=3&TopN=5', 
       success: res => {
-        console.log(res.data)
+        //console.log(res.data)
         this.setData({ 
           news: res.data[0].Small_Title
           })
