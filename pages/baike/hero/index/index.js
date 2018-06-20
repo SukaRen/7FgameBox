@@ -5,70 +5,83 @@ Page({
    * 页面的初始数据
    */
   data: {
-    heroForce:2,
-    radioItems: [
-      { name: '蜀国', value: '2', checked: 'true' },
-      { name: '魏国', value: '1' },
-      { name: '中立', value: '3' }
-    ],
-    alllist:[],
-    herolist1: [],
-    herolist2: [],
-    herolist3: []
+    winWidth: 0,
+    winHeight: 0,
+    currentTab: 0,
+    herolist21: [],
+    herolist22: [],
+    herolist23: [],
+    herolist31: [],
+    herolist32: [],
+    herolist33: [],
+    herolist11: [],
+    herolist12: [],
+    herolist13: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;    
     wx.request({
       url: 'https://api.7fgame.com:8801/?g=qx1&op=HeroListBasic',
       success: res => {  
-        this.setData({
-          alllist: res.data,
-          herolist1: res.data.filter(function (item) {
+        that.setData({
+          herolist21: res.data.filter(function (item) {
             return item.hForces == 2 && item.hType == 1;
           }),
-          herolist2: res.data.filter(function (item) {
+          herolist22: res.data.filter(function (item) {
             return item.hForces == 2 && item.hType == 2;
           }),
-          herolist3: res.data.filter(function (item) {
+          herolist23: res.data.filter(function (item) {
             return item.hForces == 2 && item.hType == 3;
+          }),
+          herolist31: res.data.filter(function (item) {
+            return item.hForces == 3 && item.hType == 1;
+          }),
+          herolist32: res.data.filter(function (item) {
+            return item.hForces == 3 && item.hType == 2;
+          }),
+          herolist33: res.data.filter(function (item) {
+            return item.hForces == 3 && item.hType == 3;
+          }),
+          herolist11: res.data.filter(function (item) {
+            return item.hForces == 1 && item.hType == 1;
+          }),
+          herolist12: res.data.filter(function (item) {
+            return item.hForces == 1 && item.hType == 2;
+          }),
+          herolist13: res.data.filter(function (item) {
+            return item.hForces == 1 && item.hType == 3;
           })
         })
+        wx.getSystemInfo({
+          success: function (res) {
+            that.setData({
+              winWidth: res.windowWidth,
+              winHeight: res.windowHeight
+            });
+          }
+        });
       }
     }) 
   },
-  radioChange: function (e) {
-    var checked = e.detail.value
-    var changed = {}
-    for (var i = 0; i < this.data.radioItems.length; i++) {
-      if (checked.indexOf(this.data.radioItems[i].name) !== -1) {
-        changed['radioItems[' + i + '].checked'] = true
-        this.data.heroForce = this.data.radioItems[i].value;   
-      } else {
-        changed['radioItems[' + i + '].checked'] = false
-      }
-    }
-    this.setData(changed);   
-    this.filldata();
+  bindChange: function (e) {
+    this.setData({
+      currentTab: e.detail.current
+    });
   },
-  filldata:function(){
-    var heroForce = this.data.heroForce;
-    var list = this.data.alllist
-    this.setData({    
-      herolist1: list.filter(function (item) {
-        return item.hForces == heroForce && item.hType == 1;
-      }),
-      herolist2: list.filter(function (item) {
-        return item.hForces == heroForce && item.hType == 2;
-      }),
-      herolist3: list.filter(function (item) {
-        return item.hForces == heroForce && item.hType == 3;
+  swichNav: function (e) {
+    var id = e.currentTarget.dataset.current;  
+    if (this.data.currentTab === id) {
+      return false;
+    } else {
+      this.setData({
+        currentTab: id
       })
-    })
-    console.log(this.data.herolist1)
-  },
+    }
+  },  
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

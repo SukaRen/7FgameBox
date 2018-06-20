@@ -1,40 +1,96 @@
-<view class="section_type">
-  <radio-group class="group" bindchange="radioChange">
-    <view class="label-2" wx:for="{{radioItems}}">
-      <radio id="{{item.name}}" hidden value="{{item.name}}" checked="{{item.checked}}"></radio>
-      <view class="label-2__icon">
-        <view class="label-2__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
-      </view>
-      <label class="label-2__text" for="{{item.name}}">
-        <text>{{item.name}}</text>
-      </label>
-    </view>
-  </radio-group>
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">蜀国</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">魏国</view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">中立</view>
 </view>
-<view class="section_hero">
-  <image src='http://Static.7fgame.com/Wx7FgaemBox/hero_title1@2x.png'  class='herotypeimg'  mode='aspectFit'></image>   
-  <view class="hero" wx:for="{{herolist1}}" wx:for-index="index" wx:for-item="item">  
-  <navigator url="/pages/baike/hero/detail/detail?id={{item.hid}}" hover-class="navigator-hover">
-    <image class='itemimg' src='{{item.hImage}}'></image>
-    <text class='itemname'>{{item.hName}}</text>
-    </navigator>
-  </view>
-  </view>
-<view class="section_hero">
-  <image src='http://Static.7fgame.com/Wx7FgaemBox/hero_title2@2x.png'  class='herotypeimg'  mode='aspectFit'></image>
-   <view class="hero" wx:for="{{herolist2}}" wx:for-index="index" wx:for-item="item">  
-    <navigator url="/pages/baike/hero/detail/detail?id={{item.hid}}" hover-class="navigator-hover">
-    <image class='itemimg' src='{{item.hImage}}'></image>
-    <text class='itemname'>{{item.hName}}</text>
-    </navigator>
-  </view>
-  </view>
-<view class="section_hero">
-  <image src='http://Static.7fgame.com/Wx7FgaemBox/hero_title3@2x.png'  class='herotypeimg'  mode='aspectFit'></image>
-  <view class="hero" wx:for="{{herolist3}}" wx:for-index="index" wx:for-item="item">  
- <navigator url="/pages/baike/hero/detail/detail?id={{item.hid}}" hover-class="navigator-hover">
-    <image class='itemimg' src='{{item.hImage}}'></image>
-    <text class='itemname'>{{item.hName}}</text>
-    </navigator>
-  </view>
-  </view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight + 400}}px" bindchange="bindChange">
+  <!-- 蜀国 -->
+  <swiper-item>
+    <view class="section_hero clear">
+      <image src='http://Static.7fgame.com/Wx7FgaemBox/hero_title1@2x.png' class='herotypeimg' mode='aspectFit'></image>
+      <view class="hero" wx:for="{{herolist21}}" wx:for-index="index" wx:for-item="item">
+        <navigator url="/pages/baike/hero/detail/detail?id={{item.hid}}" hover-class="navigator-hover">
+          <image class='itemimg' src='{{item.hImage}}'></image>
+          <text class='itemname'>{{item.hName}}</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="section_hero clear">
+      <image src='http://Static.7fgame.com/Wx7FgaemBox/hero_title2@2x.png' class='herotypeimg' mode='aspectFit'></image>
+      <view class="hero" wx:for="{{herolist22}}" wx:for-index="index" wx:for-item="item">
+        <navigator url="/pages/baike/hero/detail/detail?id={{item.hid}}" hover-class="navigator-hover">
+          <image class='itemimg' src='{{item.hImage}}'></image>
+          <text class='itemname'>{{item.hName}}</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="section_hero clear">
+      <image src='http://Static.7fgame.com/Wx7FgaemBox/hero_title3@2x.png' class='herotypeimg' mode='aspectFit'></image>
+      <view class="hero" wx:for="{{herolist23}}" wx:for-index="index" wx:for-item="item">
+        <navigator url="/pages/baike/hero/detail/detail?id={{item.hid}}" hover-class="navigator-hover">
+          <image class='itemimg' src='{{item.hImage}}'></image>
+          <text class='itemname'>{{item.hName}}</text>
+        </navigator>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="section_hero clear">
+      <image src='http://Static.7fgame.com/Wx7FgaemBox/hero_title1@2x.png' class='herotypeimg' mode='aspectFit'></image>
+      <view class="hero" wx:for="{{herolist31}}" wx:for-index="index" wx:for-item="item">
+        <navigator url="/pages/baike/hero/detail/detail?id={{item.hid}}" hover-class="navigator-hover">
+          <image class='itemimg' src='{{item.hImage}}'></image>
+          <text class='itemname'>{{item.hName}}</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="section_hero clear">
+      <image src='http://Static.7fgame.com/Wx7FgaemBox/hero_title2@2x.png' class='herotypeimg' mode='aspectFit'></image>
+      <view class="hero" wx:for="{{herolist32}}" wx:for-index="index" wx:for-item="item">
+        <navigator url="/pages/baike/hero/detail/detail?id={{item.hid}}" hover-class="navigator-hover">
+          <image class='itemimg' src='{{item.hImage}}'></image>
+          <text class='itemname'>{{item.hName}}</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="section_hero clear">
+      <image src='http://Static.7fgame.com/Wx7FgaemBox/hero_title3@2x.png' class='herotypeimg' mode='aspectFit'></image>
+      <view class="hero" wx:for="{{herolist33}}" wx:for-index="index" wx:for-item="item">
+        <navigator url="/pages/baike/hero/detail/detail?id={{item.hid}}" hover-class="navigator-hover">
+          <image class='itemimg' src='{{item.hImage}}'></image>
+          <text class='itemname'>{{item.hName}}</text>
+        </navigator>
+      </view>
+    </view>
+  </swiper-item>
+
+  <swiper-item>
+    <view class="section_hero clear">
+      <image src='http://Static.7fgame.com/Wx7FgaemBox/hero_title1@2x.png' class='herotypeimg' mode='aspectFit'></image>
+      <view class="hero" wx:for="{{herolist11}}" wx:for-index="index" wx:for-item="item">
+        <navigator url="/pages/baike/hero/detail/detail?id={{item.hid}}" hover-class="navigator-hover">
+          <image class='itemimg' src='{{item.hImage}}'></image>
+          <text class='itemname'>{{item.hName}}</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="section_hero clear">
+      <image src='http://Static.7fgame.com/Wx7FgaemBox/hero_title2@2x.png' class='herotypeimg' mode='aspectFit'></image>
+      <view class="hero" wx:for="{{herolist12}}" wx:for-index="index" wx:for-item="item">
+        <navigator url="/pages/baike/hero/detail/detail?id={{item.hid}}" hover-class="navigator-hover">
+          <image class='itemimg' src='{{item.hImage}}'></image>
+          <text class='itemname'>{{item.hName}}</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="section_hero clear">
+      <image src='http://Static.7fgame.com/Wx7FgaemBox/hero_title3@2x.png' class='herotypeimg' mode='aspectFit'></image>
+      <view class="hero" wx:for="{{herolist13}}" wx:for-index="index" wx:for-item="item">
+        <navigator url="/pages/baike/hero/detail/detail?id={{item.hid}}" hover-class="navigator-hover">
+          <image class='itemimg' src='{{item.hImage}}'></image>
+          <text class='itemname'>{{item.hName}}</text>
+        </navigator>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>

@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    searchValue: '',
     itemType: 0,
     shopType: 0,
     arrayType: ['全部类型', '法术', '物理', '生存', '补给生存', '移动', '防御', '其他'],
@@ -39,6 +40,15 @@ Page({
     })
     this.filldata();
   },
+  searchValueInput: function (e) {
+    var value = e.detail.value;
+    this.setData({
+      searchValue: value
+    });   
+  },  
+  search: function(e) {  
+    this.filldata();
+  },
   filldata: function() {
     var itype = this.data.itemType;
     var stype = this.data.shopType;
@@ -53,6 +63,13 @@ Page({
     if (stype != 0) {
       list = list.filter(function(item) {
         return item.iShopStr == slist[stype];
+      })
+    }
+    var val = this.data.searchValue;   
+    if (val != '') {
+      var reg = new RegExp(val, 'i');
+      list = list.filter(function (item) {
+        return item.iName.match(reg);
       })
     }
     this.setData({

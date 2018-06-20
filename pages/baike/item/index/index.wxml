@@ -1,25 +1,28 @@
-<!--view class="search">
-  <input type='text' class="search_input" placeholder="搜你想要的" />
-  <input type='button' class="search_input" placeholder="搜索" />
-</view-->
+<view class='page_row'>  
+  <view class="search">  
+    <view class="df search_arr">  
+      <icon class="searchcion" size='20' type='search'></icon>  
+      <input class="" placeholder="请输入关键字" value="{{searchValue}}"  value="{{searchValue}}" bindinput="searchValueInput" />  
+    </view>  
+  </view>  
+  <view class='sousuo'  bindtap="search">搜索</view>  
+</view>  
 <view class="section">
   <picker bindchange="binditemTypePickerChange" value="{{itemType}}" range="{{arrayType}}">
     <view class="picker">
       {{arrayType[itemType]}}
     </view>
   </picker>
-</view>
-<view class="section">
    <picker bindchange="bindShopTypePickerChange" value="{{shopType}}" range="{{arrayShop}}">
     <view class="picker">
       {{arrayShop[shopType]}}
     </view>
   </picker>
 </view>
-<view class="container">
-  <view class="blance" wx:for="{{datalist}}" wx:for-index="index" wx:for-item="item">
+<view class="section_item clear">
+  <view class="item" wx:for="{{datalist}}" wx:for-index="index" wx:for-item="item">
     <navigator url="/pages/baike/item/detail/detail?id={{item.itemId}}" hover-class="navigator-hover">
-      <image class='itemimg' class='index-img' src='{{item.iPic}}'></image>
+      <image class='itemimg' src='{{item.iPic}}'></image>
       <text class='itemname'>{{item.iName}}</text>
     </navigator>
   </view>

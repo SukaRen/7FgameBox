@@ -1,6 +1,121 @@
-<view>
-<view>描述：{{info.hinfo.hInfo}}</view><image src='{{info.hinfo.hImage}}' mode='aspectFit'></image>
-<view>推荐装备：{{info.hinfo.itemRecommend}}</view>
-<view>推荐：{{info.hinfo.hSyn}}</view>
-<view>推荐：{{info.hinfo.hHistory}}</view>
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">英雄简介</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">基本攻略</view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">灵技能</view>
 </view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+  <!-- 英雄简介 -->
+  <swiper-item>
+    <view class='container'>
+      <view class='itemhead' style='background-image: url(http://Static.7fgame.com/Wx7FgaemBox/hero/s{{info.hinfo.hid}}.jpg)'>
+        <view class='hInfo'>{{info.hinfo.hSyn}}</view>
+      </view>
+      <view class='itemattr'>
+        <view class='head'>|初始能力与成长</view>
+        <view class='info'>力量{{info.hinfo.hStrong}}(+{{info.hinfo.strongAdd}}) 敏捷{{info.hinfo.hAgility}}(+{{info.hinfo.agilityAdd}}) 智力{{info.hinfo.hIntellectual}}(+{{info.hinfo.intellectualAdd}}) </view>
+      </view>
+      <view class='itempItems'>
+        <view class='head'>|技能介绍</view>
+        <view class='info'>
+          <view class="section_item clear">
+            <view class="item" bindtap="selectsk" id='1'>
+              <image class='itemimg {{sk==1?"on":""}}' src='{{info.hinfo.skImage1}}'></image>
+              <text class='itemname'>{{info.hinfo.skName1}}</text>
+            </view>
+            <view class="item" bindtap="selectsk" id='2'>
+              <image class='itemimg {{sk==2?"on":""}}' src='{{info.hinfo.skImage2}}'></image>
+              <text class='itemname'>{{info.hinfo.skName2}}</text>
+            </view>
+            <view class="item" bindtap="selectsk" id='3'>
+              <image class='itemimg {{sk==3?"on":""}}' src='{{info.hinfo.skImage3}}'></image>
+              <text class='itemname'>{{info.hinfo.skName3}}</text>
+            </view>
+            <view class="item" bindtap="selectsk" id='4'>
+              <image class='itemimg  {{sk==4?"on":""}}' src='{{info.hinfo.skImage4}}'></image>
+              <text class='itemname'>{{info.hinfo.skName1}}</text>
+            </view>
+          </view>
+          <view class='skInfo' wx:if="{{sk==1}}"> {{info.hinfo.skInfo1}}
+          </view>
+          <view class='skInfo' wx:if="{{sk==2}}"> {{info.hinfo.skInfo2}}
+          </view>
+          <view class='skInfo' wx:if="{{sk==3}}"> {{info.hinfo.skInfo3}}
+          </view>
+          <view class='skInfo' wx:if="{{sk==4}}"> {{info.hinfo.skInfo4}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+  <!-- 基本攻略 -->
+  <swiper-item>
+    <view class='container'>
+      <view class='itemhead' style='background-image: url(http://Static.7fgame.com/Wx7FgaemBox/hero/s{{info.hinfo.hid}}.jpg)'>
+        <view class='hInfo'>{{info.hinfo.hSyn}}</view>
+      </view>
+      <view class='itemattr'>
+        <view class='head'>|推荐装备</view>
+        <view class="section_item clear">
+          <view class="item" wx:for="{{info.rItems}}" wx:for-index="index" wx:for-item="item">
+            <navigator url="/pages/baike/item/detail/detail?id={{item.itemId}}" hover-class="navigator-hover">
+              <image class='itemimg' src='{{item.iPic}}'></image>
+              <text class='itemname'>{{item.iName}}</text>
+            </navigator>
+          </view>
+        </view>
+      </view>
+      <view class='itempItems'>
+        <view class='head'>|基本攻略</view>
+        <view class='info'>
+          {{info.hinfo.hInfo}}
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+  <!-- 灵技能 -->
+  <swiper-item>
+    <view class='container'>
+      <view class='itemhead' style='background-image: url(http://Static.7fgame.com/Wx7FgaemBox/hero/s{{info.hinfo.hid}}.jpg)'>
+        <view class='hInfo'>{{info.hinfo.hSyn}}</view>
+      </view>
+      <view class='itemattr'>
+        <view class='lingsk'>
+          <view class='skimg'>
+            <image class='itemimg' src='{{info.hinfo.lskImage1}}'></image>
+          </view>
+          <view class='lingskinfo'>
+            <view class='skName'>{{info.hinfo.lskName1}}</view>
+            <view class='lskInfo1'>
+              <view class='skinfo'>
+                <label>冷却：</label>{{lskInfo1.lengque}}
+              </view>
+              <view class='skinfo'>
+                <label>耗魔：</label>{{lskInfo1.haomo}}
+              </view>
+              <view class='skinfo'>
+                <label>释放距离：</label>{{lskInfo1.shifang}}
+              </view>
+              <view class='skinfo'>
+                <label>生效范围：</label>{{lskInfo1.shengxiao}}
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='info'>
+          <view class='skinfo'>
+            <label>主动：</label>{{lskInfo1.zhudong}}
+          </view>
+          <view class='skinfo'>
+            <label>被动：</label>{{lskInfo1.beidong}}
+          </view>
+        </view>
+        <view class='sklv'>
+          <view>1级：{{info.hinfo.lsk1L1}}</view>
+          <view>2级：{{info.hinfo.lsk1L2}}</view>
+          <view>3级：{{info.hinfo.lsk1L3}}</view>
+          <view>4级：{{info.hinfo.lsk1L4}}</view>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>

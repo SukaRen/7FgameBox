@@ -1,1 +1,121 @@
-/* pages/baike/item/detail/detail.wxss */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  display: block;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.container {
+  font-size: 30rpx;
+  margin: 0;
+  padding: 0;
+}
+
+.itemhead {
+  width: 100%;
+  height: 201rpx;
+  margin: 0;
+  padding: 0;
+  background-image: url(http://Static.7fgame.com/Wx7FgaemBox/toolDetailBg@2x.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+}
+
+.itemhead image {
+  position: absolute;
+  left: 50%;
+  margin-left: -50rpx;
+  top: 30rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.iteminfo {
+  position: absolute;
+  width: 100%;
+  top: 200rpx;
+  height: 80rpx;
+  background-color: #333;
+  padding-left: 33px;
+}
+
+.iteminfo .item .itemname {
+  float: left;
+  color: darkorange;
+  padding-right: 20rpx;
+}
+
+.iteminfo .item .itemtype {
+  float: left;
+  color: white;
+  background-color: hotpink;
+}
+
+.iteminfo .itemprice {
+  float: none;
+  color: aliceblue;
+  display: block;
+}
+
+.itemattr, .itempItems {
+  width: 100%;
+  margin: 0;
+  padding: 5px 30px;
+}
+.itemattr {
+  margin-top:38px;
+}
+
+.itemattr .head, .itempItems .head {
+  font-size: 40rpx;
+  color: darkred;
+  font-weight:bold;
+  padding-left:20px;
+  background-color: #ccc;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+.itemattr .info, .itempItems .info {
+  padding:5px 30px;
+}
+.itempItems image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.section_item{
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+.section_item .item{
+  float: left;
+  width: 17%;
+  text-align: center;
+  margin: 10rpx 1% 10rpx;
+}
+.section_item .item .itemimg{
+  width: 100%;
+  height: 128rpx;
+}
+.section_item .item .itemname{
+  width: 100%;
+  color: #333;
+  display: block;
+  margin-top: -10rpx;
+  font-size: 24rpx;
+}

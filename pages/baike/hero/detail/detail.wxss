@@ -1,1 +1,200 @@
-/* pages/baike/hero/detail/detail.wxss */
+.swiper-tab {
+  width: 100%;
+  border-bottom: 2rpx solid #777;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 33%;
+  color: #777;
+}
+
+.on {
+  color: #da7c0c;
+  border-bottom: 5rpx solid #da7c0c;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  display: block;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.container {
+  width: 100%;
+  clear: both;
+  display: block;
+  font-size: 30rpx;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.itemhead {
+  width: 100%;
+  height: 229rpx;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+}
+
+.itemhead .hInfo {
+  font-size: 28rpx;
+  color: white;
+  position:relative;
+  left: 47%;
+  top: 77rpx;
+  width:50%;
+}
+
+.itemattr, .itempItems {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.itemattr .head, .itempItems .head {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: darkred;
+  padding-left: 20px;
+  background-color: #ccc;
+  border: 1px solid #777;
+}
+
+.itemattr .info {
+  padding: 5px 30px;
+}
+.itempItems .info {
+  margin:0;
+  padding:0;
+}
+.itempItems .skInfo {
+  padding: 5px 30px;
+  background-color: #ccc;
+}
+
+
+.itempItems image {
+  width: 130rpx;
+  height: 130rpx;
+}
+.itempItems .info .on{
+  background-image: url(http://Static.7fgame.com/Wx7FgaemBox/hero_selected@2x.png);  
+  background-repeat: no-repeat;
+   width: 152rpx;
+  height: 158rpx;
+}
+
+
+.section_item {
+  width: 92%;
+  position: relative;
+  margin: 0 auto 40rpx;
+  padding: 2%;
+}
+
+.section_item .item {
+  float: left;
+  width: 17%;
+  text-align: center;
+  margin: 10rpx 1% 10rpx;
+}
+
+.section_item .item .itemimg {
+  width: 100%;
+  height: 128rpx;
+}
+
+.section_item .item .itemname {
+  width: 100%;
+  color: #333;
+  display: block;
+  margin-top: -10rpx;
+  font-size: 24rpx;
+}
+
+.lingsk {
+  top: 20rpx;
+  padding: 10rpx;
+  height: 200rpx;
+  border: 1px solid #777;
+  margin-top: 20rpx;
+  background-color: #ccc;
+}
+
+.lingsk .lingskinfo, .lingsk .skimg {
+  float: left;
+}
+
+.lingsk .skimg image {
+  float: left;
+  height: 180rpx;
+  width: 200rpx;
+}
+
+.lingsk .lingskinfo {
+  padding-left: 15rpx;
+}
+
+.lingsk .lingskinfo .skName {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.lingsk .lingskinfo .lskInfo1 {
+  float: left;
+}
+
+.lingsk .lingskinfo .skinfo label {
+  font-size: 30rpx;
+  color: firebrick;
+  font-weight: bold;
+}
+
+.itemattr .info,.itemattr .sklv {
+  padding: 20rpx;
+  font-size: 36rpx;
+  color:#777;
+  font-weight: bold;
+}
+.itemattr .sklv {
+ background-color: #CCC;
+}
+
+.itemattr .info label {
+  color: firebrick;
+}
+.hide{
+ display: none;
+}
+.show{ 
+ display: block;
+}

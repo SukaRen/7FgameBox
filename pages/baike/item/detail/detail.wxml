@@ -1,7 +1,43 @@
-<view>
-<view>道具名称：{{info.iteminfo.iName}}</view>
-<image src='{{info.iteminfo.iPic}}' mode='aspectFit'></image>
-<view>描述：{{info.iteminfo.intro}}</view>
-<view>道具类型：{{info.iteminfo.iTypeStr}}</view>
-<view>商城类型：{{info.iteminfo.iShopStr}}</view>
+<view class='container'>
+  <view class='itemhead'>
+    <view class='itemimg'>
+      <image src='{{info.iteminfo.iPic}}'></image>
+    </view>
+    <view class='iteminfo'>
+      <view class='item'>
+        <view class='itemname'>{{info.iteminfo.iName}}</view>
+        <view class='itemtype'>{{info.iteminfo.iTypeStr}}类</view>
+      </view>
+      <view class='itemprice'>
+        价格：{{info.iteminfo.price}} 售价：{{info.iteminfo.price/2}}
+      </view>
+    </view>
+  </view>
+  <view class='itemattr'>
+    <view class='head'>|道具属性</view>
+    <view class='info'>{{info.iteminfo.intro}}</view>
+  </view>
+  <view class='itempItems'>
+    <view class='head'>|可合成道具</view>
+    <view class="section_item clear">
+      <view class="item" wx:for="{{info.pItems}}" wx:for-index="index" wx:for-item="item">
+        <navigator url="/pages/baike/item/detail/detail?id={{item.itemId}}" hover-class="navigator-hover">
+          <image class='itemimg' src='{{item.iPic}}'></image>
+          <text class='itemname'>{{item.iName}}</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+  <view class='itempItems'>
+    <view class='head'>|合成所需</view>
+    <view class="section_item clear">
+      <view class="item" wx:for="{{info.cItems}}" wx:for-index="index" wx:for-item="item">
+        <navigator url="/pages/baike/item/detail/detail?id={{item.itemId}}" hover-class="navigator-hover">
+          <image class='itemimg' src='{{item.iPic}}'></image>
+          <text class='itemname'>{{item.iName}}</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
 </view>

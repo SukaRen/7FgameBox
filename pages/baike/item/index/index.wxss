@@ -1,14 +1,80 @@
-.index-img{
-  width:160rpx;
-  height:160rpx;
-  margin: 10rpx;
+.clear {
+  clear: both;
+  zoom: 1;
 }
-.blance{
+.clear:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+picker,.picker{
+  float: left; padding-left: 3%;width: 47%;
+}
+.section_item{
+  width: 92%;
+  position: relative;
+  margin: 0 auto 40rpx;
+  background: #eeeeee;
+  padding: 2%;
+  border: 1px solid #b1b1b1;
+}
+.section_item .item{
+  float: left;
+  width: 23%;
+  text-align: center;
+  margin: 10rpx 1% 10rpx;
+}
+.section_item .item .itemimg{
   width: 100%;
-  flex-direction: column;
-  align-items: center;
+  height: 153rpx;
 }
-.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
-.clearfix{display:block;}
-.fr{float:right}
-.fl{float:left}
+.section_item .item .itemname{
+  width: 100%;
+  color: #333;
+  display: block;
+  margin-top: -10rpx;
+  font-size: 24rpx;
+}
+
+
+.search{  
+  width: 80%;  
+}  
+.search_arr {  
+  border: 1px solid #d0d0d0;  
+  border-radius: 10rpx;  
+  margin-left: 20rpx;  
+}  
+.search_arr input{  
+  margin-left: 60rpx;  
+  height: 60rpx;  
+  border-radius: 5px;  
+}  
+.bc_text {  
+  line-height: 68rpx;  
+  height: 68rpx;  
+  margin-top: 34rpx;  
+}  
+  
+.sousuo {  
+  margin-left: 15rpx;  
+  width: 15%;  
+  line-height: 150%;  
+  text-align: center;  
+  border: 1px solid #d0d0d0;  
+  border-radius: 10rpx;  
+}  
+.page_row{  
+  display: flex;  
+  flex-direction: row  
+}  
+.searchcion {  
+  margin: 10rpx 10rpx 10rpx 10rpx;  
+  position: absolute;  
+  left:25rpx;  
+  z-index: 2;  
+  width: 20px;  
+  height: 20px;  
+  text-align: center;  
+}  
